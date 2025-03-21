@@ -1,0 +1,847 @@
+LOGAN KILPATRICK: We're going to take a deep dive into some
+of the latest Gemini updates.
+DAVE CITRON: We announced Gemini Canvas.
+Anything you can imagine, you can now build.
+So you can see here, it's made this interactive web app,
+even with some animations built in, which is pretty cool.
+LOGAN KILPATRICK: I feel like people
+have been losing their mind over some of the Deep Research
+updates.
+DAVE CITRON: We're fired up, and we're
+going to make these better and better.
+LOGAN KILPATRICK: Trying to take all that AI complexity
+and sort of abstract it away into an experience that
+just feels like magic.
+DAVE CITRON: A really, truly personalized vision
+for what a Gemini app and AI assistance can be.
+LOGAN KILPATRICK: I'm excited for folks
+to get their hands on it.
+[MUSIC PLAYING]
+On this episode, we're chatting with Dave Citron,
+a PM on the Gemini app team.
+We're going to take a deep dive into some of the latest Gemini
+updates.
+Welcome, Dave.
+DAVE CITRON: Thanks so much for having me.
+LOGAN KILPATRICK: Dave, we've had
+a series of really awesome Gemini launches
+in the last few weeks.
+Do you want to give us a rundown of everything that's launched?
+DAVE CITRON: Yeah, absolutely.
+So we announced Gemini Canvas, which
+is amazing for collaborating with the model
+to create awesome, beautiful docs
+and actually write code and build beautiful web apps.
+And that's all powered by Gemini 2.0.
+And then, we also announced an upgrade to Deep Research.
+We are really excited to have the latest and greatest
+on 2.0 thinking models.
+And it's also now free for everyone to try.
+And then, we announced our new personalization feature,
+where you can opt-in to connecting your Google Search
+history and start playing with a really, truly
+personalized vision for what a Gemini app and AI assistance can
+be.
+It's really exciting.
+LOGAN KILPATRICK: I love that.
+I feel like people have been losing their mind over some
+of the Deep Research updates.
+But let's maybe start with Canvas mode.
+Do you want to just give us the lay of the land for folks
+who haven't used it yet?
+What does that product experience actually look like?
+DAVE CITRON: Yeah, absolutely.
+So we noticed a lot of people were using Gemini app to create
+content, all sorts of content.
+But it can be a little bit annoying,
+once you get onto maybe turn four or five.
+You get something that's pretty good,
+but you want to tweak maybe paragraph three.
+And so you'd have to tell the model in your prompt,
+hey, can you update paragraph three,
+but make sure not to touch the rest, et cetera.
+And so Canvas basically gives the user
+this really great, interactive, familiar UI
+to actually, with the mouse and keyboard,
+collaborate with the model directly.
+So you can not only subselect specific paragraphs
+and ask the model for feedback, but you can actually
+make edits directly, like you would in,
+let's say, Google Docs.
+And this all happens within the Gemini app,
+both on web and in mobile.
+And then beyond Docs, we also have the ability
+to create code and to, again, collaborate with Gemini
+to build all sorts of amazing coding experiences
+and, similarly, be able to subselect
+specific pieces of code to iterate instead
+of having to churn out the entire iteration over and over
+again.
+And then, maybe most excitingly, for Canvas,
+you can preview the web app in line.
+So you can create all sorts of really incredible experiences,
+even with zero coding experience, and not only preview
+it in line but actually publish it and share it
+so others can play with your creations.
+LOGAN KILPATRICK: I love that.
+I've got a bunch of deep-dive questions on this.
+And actually, you'll show our first live demo
+on this podcast, show, conversation,
+whatever we call it.
+So for folks who are listening in audio,
+you can watch on YouTube, and Dave
+will be showing a bunch of really awesome stuff.
+But my really quick tactical question
+is, how do you think about the user journey for people
+starting in the Gemini app and using
+Canvas versus, in what cases would I start in Google Docs,
+as an example?
+I'm a Google Docs 20 times a day, daily, active user.
+How should I be thinking about this?
+Am I starting for certain use cases in Docs versus Canvas
+mode?
+Or what's the breakdown between those?
+DAVE CITRON: Yeah, it's a really good question.
+The truth is, you can start wherever you want,
+and we're going to bring amazing Gemini AI to you.
+I think what we're finding is, a lot of users,
+they come to Gemini, not necessarily knowing exactly what
+they want to create.
+Oftentimes, these kind of creation sessions
+start out by brainstorming.
+And then, all of a sudden, you have
+that spark that you needed to create something amazing,
+whether that's, again, a Doc or some sort
+of code-based experience.
+And so what's really great about starting from Gemini as
+well, if you choose to start there,
+is, once you've decided to create something
+like a Doc format--
+let's say it's an essay or a script for a podcast, whatever
+you want--
+you can easily export it to Google Docs
+and then continue right where you left off
+and then have all of the amazing Google Docs features.
+So you really can't lose either way.
+LOGAN KILPATRICK: That's awesome, a great mental model.
+Do you want to dive in, and we can actually take a look
+at Canvas in action?
+DAVE CITRON: All right.
+Let me show you how it works.
+So I'm here at the Gemini web app.
+And I have a couple of prompts saved just to speed things
+up a little bit.
+But for this scenario, imagine that I
+want to help my daughter study for chemistry
+by asking Gemini Canvas to build an awesome study guide.
+So I am going to write a prompt basically just saying,
+please help me build this study guide,
+click this new Canvas button, and fire off the prompt.
+And you'll see, in just a second or two,
+the new Canvas editor pops up.
+And I have this great study guide
+that's being produced basically instantly.
+And so what's really cool about this is,
+it's actually a live editor, almost like Google Docs,
+where I can, if I wanted to, make edits directly
+to the title.
+I have a couple of different formatting options,
+like changing the font size and styling.
+I have undo, redo.
+And then I can also collaborate with Gemini in real time
+to make refined tweaks.
+Let's see.
+If I wanted to make changes across the entire document,
+I can also use these controls at the bottom.
+Here's one where it allows me to change the length.
+So I want to, in this case, make the whole document a little bit
+longer.
+And it's going ahead and doing that.
+And so you can quickly see how, gone are
+the days of having to tell the model, with every turn,
+only update paragraph two.
+And then make this a little bit shorter but not the title--
+and struggle to have a chat UI and make great artifacts.
+In this case, I'm actually having this interactive UI
+and working with the model to refine it.
+So we're really excited about the Doc Editor.
+LOGAN KILPATRICK: Yeah, I love this.
+This editing experience is super cool,
+as someone who's using Google Docs
+in too much of my daily time.
+You mentioned before that Canvas mode also has code.
+What's the experience like to go from a Google Doc
+to a code artifact?
+DAVE CITRON: Well, let's just play this scenario
+forward a little bit and imagine that I now
+want to go from helping my daughter with a study guide
+to actually building a full, interactive periodic table.
+Let's imagine that the exam is all about the periodic table
+of elements.
+So again, in the same session--
+and it uses all of the context that's generated
+so far with this doc--
+I'm now asking the model to build a beautiful web app.
+And so, again, the code version of Canvas popped right up.
+And whether you know how to write code or not,
+you can see here, it's actively busy
+trying to build me a beautiful web app.
+And again, I didn't prompt it very much.
+This is maybe two sentences' worth.
+And I'm getting this incredible, sophisticated web app
+that you'll see in a moment is quite impressive.
+LOGAN KILPATRICK: This is awesome.
+I thought my days of looking at the periodic table were over,
+but I appreciate getting to see this come back to life.
+And the code-- it looks like a lot of code, honestly.
+So I feel it's impressive.
+DAVE CITRON: Yeah, definitely wouldn't
+have been able to write that much code in five seconds
+or whatever it was.
+And again, all of that happened by just basically sending
+a couple of sentences of instructions.
+So you can see here, it's made this interactive web app,
+even with some animations built in, which is pretty cool.
+And now I can hit Share and actually share this with anyone.
+They don't even have to have a Gemini account.
+And now they can play with my interactive web app.
+So we're really excited about the ability to basically make
+everyone a web app developer.
+And we're really excited about the kinds
+of things people are going to be able to make with this.
+LOGAN KILPATRICK: Yeah, this is super cool.
+Dave, do you have any more examples of Canvas in action?
+DAVE CITRON: Yeah.
+So we've been piloting this with a bunch of trusted testers.
+And we've gotten back some amazing and mind-blowing web app
+experiences.
+And many of them were written entirely
+through prompting from people who don't
+know how to write code at all.
+So I'll just show you two of my favorite ones.
+This one is a full solar system visualizer.
+So it turns out, with web platform technology,
+you can do all sorts of amazing, sophisticated, 3D experiences.
+And the Gemini Canvas with coding
+can actually help you produce all of these things.
+So in this case, it's a full--
+let me actually zoom in here.
+And I'm going to take advantage of the fact
+that I'm using a touchscreen laptop.
+But I can actually go now and interact
+with the entire solar system, see how the planets are moving.
+I can jump to a specific planet.
+Again, you don't have to know how to write code.
+And now anyone can produce something like this.
+It's just incredible.
+Here's another example.
+It's basically like a particle simulator test.
+And so I can now click a bunch of different settings
+and see how various different particle systems will
+manipulate with gravity settings and repulsion and turbulence.
+And again, it's kind of like this precursor to a video game
+or physics simulator.
+Anything you can imagine, you can now build in just a prompt--
+just incredible.
+LOGAN KILPATRICK: Yeah, this is wild.
+I am horrible at physics, and I remember how painful it was.
+But I feel like this is the kind of thing that actually brings it
+to life in a way that would make it a little bit more fun
+to learn.
+Can you talk about, what are the limitations of this?
+Is it just any external package that's
+available on the internet I can use?
+Or is there a specific subset of different things
+that the model could actually generate code to do?
+Or for the CodeSandbox environment,
+what are the limitations for that?
+DAVE CITRON: Yeah, we're planning to basically continue
+to build on this platform again and again
+and allow you to build more and more sophisticated web apps.
+And so to start, imagine that it's mostly
+going to be contained, sandboxed-type examples,
+like the ones that you've seen here.
+Over time, we want it to hook into more and more APIs.
+And basically, the sky's the limit,
+enabling you to build any sort of web app you can imagine.
+LOGAN KILPATRICK: I love it.
+And is it also all single-page apps today?
+Or can you do a much more multi-page,
+comprehensive application?
+DAVE CITRON: Yeah, so it really just
+depends on your prompting skill.
+So fundamentally, the URL that you can share is a single URL.
+But you can instruct the model to build
+all sorts of comprehensive navigation structures inside
+of the page and dynamically update.
+So you can build a navigation tree and all sorts
+of different subpages.
+It would all be contained in a single URL, which also
+makes it really easy to share.
+But again, you can go as complex as you want.
+LOGAN KILPATRICK: Let's spend some time
+talking about Deep Research.
+So we actually had Jack Rae on to talk,
+who's one of the co-leads for Gemini thinking models.
+Can you talk about the combination of this new model
+with Deep Research, which we launched back in December?
+And it seems like people are super
+excited about the combination of these two things coming
+together.
+DAVE CITRON: Yeah, absolutely.
+We were just really excited to pioneer
+this new category of Deep Research back in December.
+It just saves people an incredible amount of time
+in situations where you really want
+to ramp up on something quickly, but you want a deeper look.
+The kind of couple bullet-point responses
+that you're seeing from Gemini before we launched Deep Research
+were good for some things.
+But if you really want to go deep,
+you would still have to do a lot of that research manually
+yourself.
+So Deep Research basically is one
+of our first long-running, agentic features
+that takes that and sometimes hours of Deep Research
+and does it all for you.
+And just a few days ago, we hooked it
+up now to the 2.0 thinking model,
+which dramatically improves the output quality, depth
+of research.
+Ultimately, the thinking model took the different agentic steps
+and upleveled almost every one of them, from the planning phase
+to how it was searching the web to how
+it was synthesizing and figuring out second-order questions
+and continuing to fire off even more searches.
+And so what we're seeing from our testing and early user
+feedback is that people are loving the reports even more.
+And again, this whole space is moving so fast.
+We just launched V1 a couple of weeks ago.
+And now, already, we're dramatically
+improving the output quality.
+And so we're fired up, and we're going
+to make these better and better.
+But the thinking model was a huge step forward.
+LOGAN KILPATRICK: Yeah.
+And Dave, one of the things that's top of mind
+is, when Deep Research launched, it was using 1.5 Pro.
+And as you all migrated over to 2.0 Flash Thinking.
+Any weird challenges?
+Or how much did the prompts have to change in order
+to make that migration work?
+DAVE CITRON: Yeah, that's a great question.
+There were definitely modifications
+that we had to make.
+A lot of the prompting we used in the original version
+was trying to push the model to do thinking without actually
+having test-time compute.
+Once we're shifted over to 2.0 thinking models,
+a lot of the work happens automatically
+because the model is a reasoning model.
+So it's taking the prompt, and what you get for free
+is this kind of reasoning step.
+So there was definitely prompt evolution.
+There's also, I think, less need to do supervised fine-tuning,
+to post-train the model with specific, curated data
+sets on what makes a really good research report.
+Part of that was just upgrading to the 2.0 class
+of models in general.
+But then, when you add in thinking, test-time compute,
+you just really get a step-function improvement
+in the ability to synthesize these great research reports
+without having to curate a bunch of data
+to teach the model what makes a good research report.
+LOGAN KILPATRICK: Dave, do you want
+to show us Deep Research in action?
+And while you're showing us, I'll
+make my random obligatory comment that.
+The first time I saw this was actually one of the demos that
+was going viral externally around, like,
+1,000-plus pages visited on the web to answer someone's query.
+And I was like, that is literally incredible.
+It's so wild to see it actually very tangibly doing work
+for you.
+And I think, when you see the number of pages visits,
+I think about how long and how much time that would
+have taken me in order to do.
+DAVE CITRON: Yeah, that's a really good point.
+One of the things that we're taking advantage of here
+to deliver this cutting-edge feature
+is Gemini's long context windows.
+And I think if you think about what Deep Research means
+in the Gemini app, it really is filling up
+that context window, which is actually quite hard to do
+normally, especially as a human copying
+and pasting a bunch of text, basically agentically,
+having the model go out and go as deep as it needs to.
+And that large context window really shines here.
+LOGAN KILPATRICK: No, I love it.
+Let's see a demo.
+DAVE CITRON: OK.
+Awesome.
+So again, the experience of using Deep Research
+is very similar to what we launched in December.
+We've added a pretty handy shortcut directly
+to the bottom bar here.
+So I'm going to have a prompt saved just
+to speed things up a little bit.
+In this case, I have this fancy question
+about researching, integrating AI agents.
+And I'm just going to click the Deep Research button
+and then hit Submit.
+And again, this is going to fire off.
+And the model's going to recognize, OK,
+this user is asking for a long-running agentic task that
+is deep research.
+And it's actually going through a little bit
+of a pre-planning step.
+And it's going to output to me all the different steps
+that it thinks I'm going to want.
+And if I want to, I can make changes before it goes off.
+So if this is more of a quick answer,
+we wouldn't even ask the user if this
+was exactly what they wanted.
+We would just give them something very quickly
+and then allow the user to keep riffing.
+But in this case, because it's going
+to take a couple of minutes, we really
+want to make sure that the user--
+in some sense, this has an approval step
+that this is actually the research
+plan that they're looking for.
+So if I wanted to, I could just type to edit the plan,
+or I could click the Edit Plan button
+and say, actually, no, I want you to focus on this
+or spend a little bit more time on this,
+or maybe focus on academic sources.
+But in this case, this looks really good.
+And all I need to do is click Start Research.
+And boom, the research report is going to start.
+What's really cool about this new version of Deep Research
+is, as the model is actually doing all of this agentic work,
+using the thinking model, we can now
+see the thoughts of the agentic task as it's happening.
+So you can see here, basically, step
+by step, what the model is doing, thinking, what web pages
+it's checking out, what it's thinking about those web
+pages, what secondary questions it's going to now ask itself
+and uncover.
+And this will ultimately conclude
+with producing this amazing, synthesized report.
+So you can see here the first set of websites
+that it's decided to research.
+And, in fact, I can even just click through and open them
+directly if I wanted to.
+But the great thing about Deep Research
+is, you don't have to sit here and babysit.
+It's all under your control and your approved plan.
+And so now you can go off and do other things.
+In fact, you don't even have to stay on the device.
+You can switch to mobile if you wanted to,
+and the Gemini app will notify you when it's complete.
+So again, I'm going to not wait for this thing to finish.
+Right before we started chatting, I, in a different tab,
+actually let this exact same report complete.
+And so you can see here now, I have a very Canvas-like editing
+experience where I can actually go through and read
+this amazing comprehensive report.
+And again, let's see how many--
+this is hundreds of sources--
+probably would have taken me half a day
+if I really wanted to read all of these different sources
+and then construct them all together
+into a synthesized report.
+And I no longer need to do that.
+I can have Gemini do it for me.
+LOGAN KILPATRICK: Is it doing inline citations
+for a bunch of the sources that are being visited?
+DAVE CITRON: Yeah, absolutely.
+In fact, you can see it here.
+We actually corroborate at both the paragraph level
+and even the sentence level.
+So you can see, once I expand sources for a paragraph,
+I can actually go through and get
+little indicators of exactly where we
+got each piece of information.
+And so it's a really good question
+because, both, we want the output
+to be as trustworthy as possible so you actually
+can leverage this for real, for all sorts
+of really important workloads.
+But also, we want to make sure to showcase
+great sources on the web.
+This has been a remarkable way to discover whole new websites
+for topics that I'm interested in that I've
+been able to discover through Deep Research
+and just actually looking through the citations
+and then the sources links at the bottom.
+So yeah, it's an incredible new way
+to think about using the web.
+LOGAN KILPATRICK: My really quick, obligatory question--
+because I get this every time I post anything about Deep
+Research-- is, developers really like this,
+and they want this in an API.
+I don't know.
+I think maybe it's on us to go and potentially make an API.
+But I'm just curious to get your high-level thought about how
+this type of product--
+building into the Gemini app versus something
+that's available to developers.
+Could a developer go and build this themselves today,
+or is there a bunch of special magic
+that we're doing that would actually require
+us to put this in an API?
+DAVE CITRON: Yeah, it's a really good question.
+I think we talked earlier about what
+it took to port the V1 version on the 1.5 Pro
+model to the new thinking model.
+And the amount of work it took and the, as an example,
+supervised fine-tuning data that we had to curate and collect
+and post-train the model in the first version
+was no longer needed in the second version.
+And I think even some of the prompts
+got a little bit simpler.
+And so I think there's still quite a bit of special sauce
+that we've bundled into the feature on top
+of the basic model.
+But the trend line is, I think, the important part
+for developers where every model iteration,
+it's getting simpler and simpler to build
+more and more sophisticated and agentic experiences.
+And I think that the reasoning power of this class of thinking
+models is really the big breakthrough, especially
+if you're trying to build these kind
+of longer-running, agentic experiences.
+And so I can expect, whether it's a Deep-Research-specific
+API or not, it's going to get easier and easier as we continue
+to update the base models to build experiences like this.
+LOGAN KILPATRICK: Yeah, Dave, this is awesome.
+How are you thinking about the amount of content
+that's being shown for people on different devices,
+like the mobile story for this for Deep Research
+versus the desktop experience?
+And I think about how I'm searching
+for stuff on-the-go versus sitting at my desk,
+doing actual deep work.
+DAVE CITRON: Yeah, it's a great question.
+It reminds me of this YouTube metaphor
+for model picking with respect to giving you the right content
+for the moment.
+We're really excited also by the ability
+to create audio overviews now in Gemini.
+And you can do that now for any content, any content type.
+You can upload files.
+You can chat with the thing.
+You can do deep research.
+And all of this can be turned into now an audio overview.
+And I think that's the perfect on-the-go consumption mechanism.
+So oftentimes, my use cases turned into kick off a research,
+maybe on desktop, maybe on mobile.
+But either way, I cue a couple of them up.
+And then, on my drive into work, I
+have all this amazing, rich audio overview
+content to listen to.
+I can spend hours listening to this content.
+And it's just amazing.
+You can kind of infinitely now generate research and then
+really incredible content that you can listen to on the go.
+It's all at your fingertips, and it's all now available.
+I should also mention too, Deep Research
+is now available for anyone to try.
+So you don't need to have Gemini Advanced to try Deep Research.
+And so, again, all these features are coming together.
+And we're really excited about everyone being able to try this.
+LOGAN KILPATRICK: Is my understanding correct
+that the audio overview is like the same sort of audio overview
+that's powering the NotebookLM experience that people love?
+DAVE CITRON: Yeah, absolutely.
+We worked really closely with the NotebookLM team.
+And it's almost identical implementation.
+So if you've used NotebookLM or you've heard
+about their great audio overviews feature,
+we're really excited to be bringing it to Gemini app.
+LOGAN KILPATRICK: I feel like the Gemini app is becoming
+this interface to all of the stuff
+that you do with Google and all these different technologies,
+which is actually a perfect segue
+to talk about all the personalization stuff that
+launched in the Gemini app.
+And I'll give my sort of bad explanation of it,
+and then let's do a deep dive and actually look at some demos.
+But my understanding is, starting with Google Search,
+you can actually now bring in a bunch of your search history
+into the context of the Gemini app
+and have that inform some of the searches.
+And we were talking offline about how
+this intuitively doesn't seem like it
+would make a big difference.
+But actually, for a bunch of user queries,
+you end up getting this really magical experience.
+So do you want to talk us through and show us this?
+DAVE CITRON: Yeah, absolutely.
+Well, so just to start out, I want
+to level set on our vision for personalization in Gemini app.
+Today, when you use Gemini app-- or really, any chatbot
+on the market right now-- it's a very transactional,
+almost an incognito-mode-style interaction where
+it knows nothing about you.
+It's almost starting from scratch,
+from the very beginning.
+And this can be quite exhausting.
+Prompting is super powerful.
+But having to remind Gemini app again and again
+this basic context, like, hey, I work at this place,
+and here are my preferences--
+it can be quite exhausting.
+And so people oftentimes are just not doing that,
+and they're learning to have a very limited and transactional
+interaction with the product.
+We rolled out a couple of features
+over the last couple of months where you can actually,
+when you tell the model to remember something,
+like that I'm a vegetarian, it will actually remember that
+across all of your sessions.
+And then you can go into settings
+and edit those specific memories,
+where the model can actually look up
+previous chats on the fly.
+So it gives this feeling that, as you're chatting with Gemini
+app, it's learning with you.
+And you can reference, hey, yesterday we were
+working together on a project.
+I'd like to do something new with that project today.
+And instead of having to feed all of that context back in,
+Gemini can just reference those past chats
+and keep the conversation going.
+So this new personalization feature
+really starts to show the full vision of personalization
+for Gemini app where we go from a transactional chatbot
+into a truly personalized AI assistant that gets to know you
+almost like a friend.
+And you can see this.
+In fact, I would love to demo it for you.
+If I come here to the Gemini Home page--
+let me just switch to this new Personalization feature.
+We've started by giving the model, with your permission,
+access to Google Search history.
+And so in this case, I've already
+opted into the connection.
+But you basically have full control.
+You can even see here, at any time,
+I can disconnect the feature.
+But I can now ask the model to do
+all sorts of interesting things based on my search history.
+And as you were mentioning, there's
+been all sorts of this amazing, serendipitous discovery
+on the types of things this is helpful for and, in particular,
+for recommendations.
+And so it basically will help craft any kind of thing you're
+interested or excited about--
+what kind of music you might want to listen to,
+what kind of vacations or trips you might be interested in.
+Because it's seeing patterns in your search history,
+in terms of what your interests are,
+it's able to craft all sorts of these amazing things.
+You can even ask, if I was an animal, what animal would I be?
+And some of the results are pretty mind-blowing.
+LOGAN KILPATRICK: How is the personalization engine?
+And how is the model sifting out the things
+like the random, one-off Google Search
+that I'm doing versus something that's actually
+intrinsic to a characteristic about me or something
+that I'm interested in?
+Because I'm often searching for stuff that I feel like I'm
+actually not that interested in, and I'm just
+trying to really quickly get some context on whatever
+the random thread is.
+DAVE CITRON: Yeah, absolutely.
+We've done a lot of work to teach the model
+to basically ignore any of that type of data that
+isn't helpful to craft the specific prompts that you're
+asking for.
+So let me actually just show you an example.
+I think in this case, the prompt that I've prepared here
+is just, where should I go on vacation this summer?
+And I'm going to fire this off.
+The thing I should mention too, which
+will help answer your question, is that this is all
+using the thinking model.
+And so what's really interesting is-- it's giving me a response,
+basically giving me a couple of tips.
+You can even see in the response,
+it's explaining why it's chosen certain things based
+on specific searches that you've done.
+But I can actually go and look at the thoughts
+and see exactly how it reasoned over my specific searches
+in my search history to come up with the conclusion of where
+it's recommending I go on vacation.
+So in this case, because I've expressed interest--
+because I've searched for things like South Korea, Japan, Hawaii,
+et cetera, it's now tailoring exactly what
+it thinks my perfect and ideal vacation is.
+So to answer your question, we're
+using a combination of training on the model as well as
+this new thinking engine to make sure
+that we're not overindexing on things that isn't actually
+helpful to your response.
+And we find only a small percentage of prompts
+actually end up triggering and requiring
+some modification because of your search history.
+So we don't want to get too overindexed on things.
+We want it to just remain a super helpful AI assistant.
+But when that context does help generate
+a more personalized response, then that's the sweet spot.
+LOGAN KILPATRICK: Yeah, that's actually super interesting.
+If you don't mind, if we can pull on this thread
+of the percentage of queries in which this is invoked--
+you could imagine, my human example of this is,
+I feel like every interaction that we have as humans--
+even if you're meeting a complete stranger,
+in many cases, there's some amount
+of context of how you've met them, how you got to the place
+that you are.
+So how do you think about the world in which--
+as the personalization engine is integrated
+with more and more data sources across the Google ecosystem,
+is every query going to be a personalized query?
+Or is it still only certain queries
+that will end up having that?
+DAVE CITRON: From a user experience perspective,
+the best answer is, it should only do it when it perfectly
+helps improve the response.
+And it should never do it when you find it annoying
+and it steers the response off and into the wrong direction.
+And that's basically the bar that we
+eval towards where we want this to only
+be an incremental positive.
+And again, you're in control of the entire time.
+You're deciding when to connect, when to disconnect.
+And we were also looking for feedback,
+which is part of the reason why we've launched
+this as an experimental model.
+We want to make sure that we're getting that sweet spot right
+and then layer in more of these data
+sets to really supercharge anything
+you could imagine asking.
+It has the context from all of these different apps
+and properties.
+LOGAN KILPATRICK: Yeah.
+And one other follow-up on this is, how do you actually
+eval this?
+Is it just like, you get a bunch of side-by-sides of something
+with certain contexts, and then you double-check that
+the model--
+it's saying something came from search history that actually
+came from search history?
+Is that a difficult process, to make
+the model good at doing this?
+And the context of me asking this is, I think developers
+generally want this sort of personalization layer
+across their products.
+I think, as you mentioned, it's not a uniquely Google challenge
+that every chatbot that you go to today or every AI product
+that you go to today has no idea who you are,
+has none of this context.
+So I feel like solving this is a very globally helpful problem.
+DAVE CITRON: Yeah, it's a really good question.
+It's very tricky, in particular, because only the end
+user with their specific data sets
+knows whether the answer is actually good.
+So if you asked for vacation recommendations
+and you got my exact response, you would probably think,
+oh, this doesn't match my interest level.
+LOGAN KILPATRICK: Yeah, Dave.
+My last question on this-- and to share my personal anecdote,
+I remember having a conversation with one of my best friends,
+who's actually very AI-adjacent.
+They're not oblivious to the world of AI.
+And they were telling me that they always used
+the same conversation thread when
+they were talking to AI because they thought that the model was
+learning from the interaction.
+And I think the underlying thread of this
+is, it speaks to the assumptions that people have.
+Because they hear AI and machine learning,
+and they think that these systems are just doing
+a lot of these things for them.
+As you think about bringing this out
+of this separate Personalization mode inside of the Gemini app,
+what are the considerations?
+How are you trying to tell this story to users as far
+as when personalized content is being used, when it's not,
+how to bridge that gap?
+Because I feel like it's this very emergent user experience
+space that is honestly pretty tough to solve.
+But it's also super important, given how material the impact is
+on improving end-user queries.
+DAVE CITRON: Yeah, it's a really good question.
+I don't think we've solved all of it.
+I think that's, again, why we're launching it experimentally
+first.
+And we're waiting for a lot of user feedback,
+particularly to make sure that people
+feel in control of their data.
+That's really the most important feature
+to land as part of all of this, is making sure
+that the user feels in control.
+And it's helpful.
+It's not annoying or obnoxious.
+And so I think that we'll graduate it
+when we feel like users are telling us
+this is maximally helpful and they feel in control.
+I think the idea is, a brand new user won't start with all
+these data sources connected.
+The other thing we do--
+and actually, with our Saved Info feature,
+this is already live in the product--
+whenever we ground on something from your Saved Info,
+we actually use our citation cards.
+So at the bottom of responses, whenever we search the web
+and we use different webpage snippets to help answer
+the question, we then cite each of them
+with cards at the bottom of the response
+to make it really easy to understand
+if you want to deep dive into why we generated this response
+or actually visit each of those different web pages.
+And the same is true of your Saved Info.
+So whenever we ground on your memories or your personalization
+data, you basically see exactly how and why we grounded on it.
+And then you can actually click.
+And that's where you can control turning it
+off, making changes, et cetera.
+And so we think that pattern is really important too
+to have some transparency in terms
+of what the overall system knows about you.
+And I think, finally, you can ask it things.
+I said, where should I go on vacation?
+But you can ask it, what do you know about me?
+And that's where it gets really fun,
+in terms of if I were an animal, and if I were a song.
+And again, with the thinking model,
+you can go into Debug view and see
+exactly how it pieced all this different information together
+to come up with a response.
+LOGAN KILPATRICK: I was just ruminating
+for a second on the level of AI complexity in the future.
+As you could imagine, with Deep Research,
+doing an Audio Overview of it, with Personalization mixed in,
+it becomes this very, very complex ensemble
+and handoff between all these different models.
+And I have a lot of empathy for you
+and the Gemini app team trying to take all that AI complexity
+and abstract it away into an experience that
+just feels like magic.
+And I think some of these new experiences
+that launched get us really close
+to that magical experience.
+So thanks for all the hard work.
+Thanks for showing us all these super cool demos.
+I'm excited for folks to get their hands on it.
+It's just gemini.google.com, right,
+is the place to sign up and get started?
+DAVE CITRON: Yep, that's right.
+That's right.
+LOGAN KILPATRICK: Thanks for coming on the show, Dave.
+DAVE CITRON: Yeah, thanks so much for having me.
+It was great chatting with you.
+[MUSIC PLAYING]
