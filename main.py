@@ -4,13 +4,14 @@ import re
 import sys
 import requests
 import logging
-
+from myai import transcribe_it
+            
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("main")
 
 def extract_video_id(url_or_id):
     """Extract video ID from URL or return the ID if it's already just an ID."""
@@ -109,6 +110,7 @@ def main():
         sys.exit(1)
     
     download_youtube(video_id)
+    transcribe_it(video_id)
 
 if __name__ == "__main__":
     main()
