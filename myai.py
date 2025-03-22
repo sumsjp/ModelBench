@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import logging
 import time
+import xml.etree.ElementTree as ET
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("main")
@@ -11,30 +12,36 @@ logger = logging.getLogger("main")
 
 load_dotenv()
 
-prompt = '''
-您是個專業的研究員，可幫忙整理學術文獻的重要內容。
-1. 請你務必**用中文回答**，除人名與專有名詞外，不要使用英文。
-2. 整理學術文獻，會使用正式的學術用語。
-3. 提供清晰、客觀的文獻總結時，會使用正式的學術用語。
-4. 歸納文獻的主要重點，包括主題、觀念、原因、解決方案、結論和建議。
-5. 提供清楚的、目標性的、正確的重點總結。
-6. 避免個人意見和推浮，是一個可信賴的工具，用于整理各個領域的複雜學術內容，非常適於研究人員、學生和學術人士。
-'''
+def load_config(config_file='prompts.txt'):
+    """Load prompts, templates and models from XML config file."""
+    try:
+        tree = ET.parse(config_file)
+        root = tree.getroot()
+        
+        # Extract prompts
+        prompts = []
+        for prompt in root.find('prompts').findall('prompt'):
+            prompts.append(prompt.text.strip())
+            
+        # Extract templates
+        templates = []
+        for template in root.find('templates').findall('template'):
+            templates.append(template.text.strip())
+            
+        # Extract models - dynamically assign A-Z based on count
+        models = {}
+        model_list = root.find('models').findall('model')
+        for idx, model in enumerate(model_list):
+            model_id = chr(65 + idx)  # 65 is ASCII for 'A'
+            models[model_id] = model.text.strip()
+            
+        return prompts, templates, models
+    except Exception as e:
+        logger.error(f"Error loading config: {e}")
+        return [], [], {}
 
-template = '''
-===== 文章開始 =====
-
-{text}
-
-===== 文章結束 =====
-
-請整理此文章重點，使用正式的學術用語，並以小節作歸納。
-將原文章用中文重寫，用中文列出詳細重點，作清楚客觀的整理。
-'''
-
-# MODEL = 'deepseek-r1:14b'
-MODEL = 'gemma3:27b'
-
+# Load configuration from prompts.txt
+prompts, templates, models = load_config()
 
 def transcribe_it(video_id):
     transcript_path = os.path.join("transcript", f"{video_id}.txt")
@@ -48,23 +55,29 @@ def transcribe_it(video_id):
             with open(transcript_path, 'r', encoding='utf-8') as f:
                 transcript_text = f.read()
                 
-            for model in ["A", "B"]:
-                for ptype in [1]:
+            # Use all available models from config
+            for model_id in models.keys():
+                model_name = models[model_id]
+                
+                for pidx in range(len(prompts)):
+                    prompt = prompts[pidx]
+                    template = templates[pidx]
+
                     import time
                     start_time = time.time()
                     
-                    if model == "A":
-                        summary = chat_with_gemini(transcript_text)
+                    if model_name.startswith("gemini"):
+                        summary = chat_with_gemini(model_name, prompt, template, transcript_text)
                     else:
-                        summary = chat_with_openai(transcript_text)
+                        summary = chat_with_openai(model_name, prompt, template, transcript_text)
                         
                     elapsed_time = time.time() - start_time
-                    logger.info(f"Model {model} took {elapsed_time:.2f} seconds")
+                    logger.info(f"Model {model_id}({model_name}) took {elapsed_time:.2f} seconds")
 
                     # Save the summary
-                    output_path = os.path.join(result_dir, f"{video_id}_{ptype}{model}.txt")
+                    output_path = os.path.join(result_dir, f"{video_id}_{model_id}{pidx+1}.md")
                     with open(output_path, 'w', encoding='utf-8') as f:
-                        f.write(f"Model = {model}\n---\n\n")
+                        f.write(f"Model = [{model_id}] {model_name}\n---\n\n")
                         f.write(f"elapsed_time = {elapsed_time:.2f}\n---\n\n")
                         f.write(f"prompt = {prompt}\n---\n\n")
                         f.write(f"template = {template}\n---\n\n")
@@ -76,13 +89,13 @@ def transcribe_it(video_id):
     else:
         logger.error(f"Transcript file not found: {transcript_path}")
 
-def chat_with_gemini(message):
+def chat_with_gemini(model_name, prompt, template, message):
     try:
         # Configure the model
         genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
         
         # Create the model instance
-        model = genai.GenerativeModel('gemini-2.0-flash')
+        model = genai.GenerativeModel(model_name)
         
         content = template.format(text=message)
         
@@ -107,7 +120,7 @@ def chat_with_gemini(message):
     except Exception as e:
         return f"Error generating summary: {str(e)}"
 
-def chat_with_openai(message):
+def chat_with_openai(model_name, prompt, template, message):
     client = OpenAI(
         api_key='ollama',
         base_url='http://solarsuna.com:34567/v1'
@@ -117,7 +130,7 @@ def chat_with_openai(message):
         content = template.format(text=message)
         
         response = client.chat.completions.create(
-            model=MODEL,
+            model=model_name,
             messages=[
                 {
                     "role": "system",
